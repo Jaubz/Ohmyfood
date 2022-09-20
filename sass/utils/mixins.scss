@@ -1,0 +1,25 @@
+@import "./variables";
+@mixin light-button{
+    box-shadow: 3px 3px 8px 0px #0000008e; 
+    background: linear-gradient(
+        163deg,
+        lighten($color-secondary, 2%) 0%,
+        lighten($color-secondary, 2%) 33%,
+        lighten($color-primary, 2%) 100%
+      );
+}
+@mixin functionning-button {
+    background: $reservation-background;
+    box-shadow:2px 3px 20px 0px #2b2b2b3f;
+}
+@mixin light-functionning {
+   background-color: $color-secondary;
+}
+@mixin hover-icon{
+    color:linear-gradient(
+        163deg,
+        lighten($color-secondary, 2%) 0%,
+        lighten($color-secondary, 2%) 33%,
+        lighten($color-primary, 2%) 100%
+      ) ;
+}
