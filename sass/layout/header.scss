@@ -1,6 +1,55 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
 .header{
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &__logo{
-        color: aqua;
+        margin: 1rem;
+    }
+    &__map{
+        border-top: rgba(0, 0, 0, 0.062) 2px solid;
+        background-color: rgba(230, 230, 230, 0.801);
+        display: flex;
+        justify-content: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        color: rgb(43, 43, 43);
+        padding: 1rem 0rem 1rem 0rem;
+        width: 100%;
+    }
+    input{
+        background-color: #ebebeb;
+        border: none;
+        width: 9rem;
+        font-size: 1rem;
+        &::placeholder{
+            color: rgb(43, 43, 43);
+            font-weight: 550;
+        }
+    }
+    .fa-map-marker-alt{
+        margin-right: 1rem;
+    }
+}
+.reservation{
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    background-color: $reservation-background;
+    &__title{
+        width: auto;
+        font-weight: 600;
+        font-size: 1.9rem;
+        margin-bottom: 0%;
+    }
+    &__undertitle{
+        margin-top: 0.5rem;
+        font-size: 1.2rem;
+        color: $color-quaternary;
     }
 }
