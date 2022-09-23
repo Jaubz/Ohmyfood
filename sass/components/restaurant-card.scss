@@ -1,3 +1,7 @@
+@use "../Utils/variables";
+@use "../Utils/mixins";
+
+
 .restaurant__cards{
     display: flex;
     flex-wrap: wrap;
@@ -19,3 +23,99 @@
         }
     }
 }
+.principal{
+    @media (min-width: 800px){
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        max-width: 100%;
+        margin: 0%;
+        gap: 0.5rem;
+        .principal1{
+            @media (min-width: 800px){
+                display: flex;
+                flex-direction: column;
+                width: auto;
+            }
+        }
+    }
+}
+
+.section__menu{
+    width: 100%;
+}
+.carte__bouton{
+    display: flex;
+    flex-direction: row-reverse;
+    width: auto;
+    margin: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0rem 1rem 1rem 1rem;
+    background-color: $reservation-background;
+    box-shadow: 2px 2px 11px 0px #0000004f;
+    cursor: pointer;
+    border-radius: 1rem;
+    @media (min-width: variables.$breakpoint){
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+    &:hover{
+        .carte__checkIcon , .carte__prix{
+            margin-right: 0;
+            transition: all 1s;
+            }
+            i{
+                animation: checkrotate 800ms;
+                color: white;
+            }
+        }
+    }
+    .carte__body{
+        display:flex;
+        flex-direction: column;
+        width:100%;
+        padding: 0.75rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 0.9rem;
+        @media (max-width: 345px){
+            font-size: 0.7rem;
+        }
+        h3,p{
+        display: inline-block;
+        max-width: calc(80%);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        }
+        .carte__titre{
+            h3{
+                margin: 0rem 0rem 0.5rem 0rem;
+                font-weight: 600;
+            }
+        }
+        .carte__description{
+            display: flex;
+            flex-direction: row;
+            max-width: calc(100%);
+            justify-content: space-between;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            .carte__prix{
+                font-weight: 600;
+            }
+        }
+    }
+    .carte__checkIcon{
+        background-color: $color-tertiary;
+        $button-width: 5rem;
+        width: $button-width;
+        display: flex;
+        margin-right: -5rem;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+    }
