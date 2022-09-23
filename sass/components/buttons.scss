@@ -1,0 +1,38 @@
+.btn{
+    &__explore{
+        background: $button-gradient;
+        color: white;
+        font-weight: 500;
+        padding: 0.8rem;
+        border-radius: 10rem;
+        border: none;
+        cursor: pointer;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        box-shadow: 3px 3px 8px 0px #0000004f;   
+    }
+    &__explore:hover{
+        @include light-button;
+        transition: 500ms;
+    }
+}
+.btn__menu{
+    display: flex;
+    justify-content: center;
+    .btn__menuu{
+        background: $button-gradient;
+        color: white;
+        padding: 0.8rem 2rem 0.8rem 2rem;
+        font-weight: 550;
+        border-radius: 10rem;
+        border: none;
+        cursor: pointer;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        box-shadow: 3px 3px 8px 0px #0000004f; 
+        &:hover{
+            @include light-button;
+            transition: 500ms;   
+        }
+    }
+}
