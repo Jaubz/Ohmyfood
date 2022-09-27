@@ -1,0 +1,31 @@
+.heart-container{
+    position: relative;
+    .far{
+        opacity: 1;
+        font-size: 25px;
+    }
+    .fas{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        transform: scale(0);
+        transition: transform 500ms ease-in-out;
+        font-size: 25px;
+    }
+    &:hover{
+        .fas{
+            transform: scale(1);
+            background-image: linear-gradient(to bottom,$color-secondary 0%,$color-primary 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            opacity: 1;
+        }
+        .far{
+            opacity: 0;
+        }
+    }
+}
