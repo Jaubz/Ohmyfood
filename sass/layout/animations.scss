@@ -1,0 +1,45 @@
+@keyframes checkrotate{
+    from{
+        transform: rotate(-360deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes menudelay{
+    from{ 
+        transition: all 1s;
+        margin-top: 3rem;
+        opacity: 0;
+    }
+    to{
+        transition: all 1s;
+        margin-top: 0rem;
+        opacity: 1;
+    }
+}
+
+@keyframes loading{
+    from{
+        opacity: 1;
+        z-index: 10;
+    }
+    to{
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg); border-width: 10px;
+    }
+    50% {
+        transform: rotate(180deg); border-width: 1px;
+    }
+    100% {
+        transform: rotate(360deg); border-width: 10px;
+    }
+} 

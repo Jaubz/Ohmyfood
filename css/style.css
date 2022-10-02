@@ -364,6 +364,12 @@ body {
   align-items: center;
 }
 
+.img__restaurant {
+  width: 350px;
+  height: 300px;
+  object-fit: cover;
+}
+
 .btn__explore {
   background: linear-gradient(163deg, rgb(238, 115, 218) 0%, rgb(160, 91, 220) 100%);
   color: white;
