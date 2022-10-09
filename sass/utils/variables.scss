@@ -1,9 +1,12 @@
 $color-primary:#9356dc;
+$color-primary-light:lighten($color-primary,10%);
 $color-secondary:#ff79da;
+$color-secondary-light:lighten($color-secondary,10%);
 $color-tertiary:#99e2d0;
 $color-dark-tertiary:#476d63;
 $color-quaternary: #959595;
 $background-footer: #353535;
-$reservation-background: #f6f6f6;
-$button-gradient: linear-gradient(163deg, rgba(238,115,218,1) 0%, rgba(160,91,220,1) 100%);
+$reservation-background: #f7f7f7;
+$button-gradient: linear-gradient(163deg, $color-secondary 0%, $color-primary 100%);
+$button-gradient-light: linear-gradient(163deg, $color-secondary-light 0%, $color-primary-light 100%);
 $breakpoint: 767px;

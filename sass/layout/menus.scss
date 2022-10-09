@@ -1,16 +1,10 @@
 .menu__title{
-    position: absolute;
     width: 100%;
-    bottom: 0%;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: white;
     border-radius: 1rem 1rem 0rem 0rem;
     i{
-        position: absolute;
         font-size: 1.5rem;
-        right: 1rem;
-        top: 1.4rem;
         margin-right: 1rem;
         cursor: pointer;
         @media (min-width: $breakpoint){
@@ -25,7 +19,8 @@
             margin-left: 8%;
             padding: 0%;
         }
-    }.far{
+    }
+    .far{
         &:hover{
             color: transparent;
             opacity: 0;
@@ -44,4 +39,17 @@
     }
 }
 
-    
+    .img__restaurant{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    z-index: -10;
+    position: relative;
+}
+main{
+    background-color: $reservation-background;
+    border-radius: 20px 20px 0 0;
+    margin-top: -20px;
+    z-index: 10;
+    position: relative;
+}

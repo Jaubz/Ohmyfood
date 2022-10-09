@@ -1,0 +1,9 @@
+.restaurant__title{
+    margin-left: 5%;
+}
+@media screen and (min-width:992px){
+    .restaurant__title{
+        width: 60%;
+        margin: 0 auto 20px auto;
+    }
+}

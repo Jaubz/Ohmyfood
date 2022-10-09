@@ -12,7 +12,9 @@
         box-shadow: 3px 3px 8px 0px #0000004f;   
     }
     &__explore:hover{
-        @include light-button;
+        // @include light-button;
+        background: $button-gradient-light;
+        transform: scale(1.3);
         transition: 500ms;
     }
 }
