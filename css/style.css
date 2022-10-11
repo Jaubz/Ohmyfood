@@ -203,6 +203,11 @@ body {
         animation: loader 1.5s linear infinite;
     }
     */
+.header__logomenu {
+  display: flex;
+  justify-content: center;
+}
+
 .menu__title {
   width: 100%;
   padding-top: 1rem;
@@ -244,6 +249,17 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
+}
+
+.menus__title ::after {
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(to right, #346abf 0%, #7096d2 100%);
 }
 
 .img__restaurant {
