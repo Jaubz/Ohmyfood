@@ -1,12 +1,16 @@
-.header__logomenu{
+.header__menu{
+    font-size: 2.5rem;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 15%;
 }
 .menu__title{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-radius: 1rem 1rem 0rem 0rem;
@@ -43,6 +47,9 @@
         background-clip: text;
         -webkit-background-clip: text;
         opacity: 1;
+    }
+    .back{
+        width: 50%;
     }
 }
     .img__restaurant{
@@ -96,4 +103,63 @@ main{
         }
     }
 }
-        
+.principal .section__menu{
+    .carte__bouton1{
+        animation: slide-from-bottom 2s ease both;
+    }
+    .carte__bouton2{
+        animation: slide-from-bottom 2s ease both;
+        animation-delay: 0.4s;
+    }
+    .carte__bouton3{
+        animation: slide-from-bottom 2s ease both;
+        animation-delay: 0.8s;
+    }
+}
+.principal1 .section__menu{
+    .carte__bouton4{
+        animation: slide-from-bottom 2s ease both;
+    }
+    .carte__bouton5{
+        animation: slide-from-bottom 2s ease both;
+        animation-delay: 0.4s;
+    }
+    .carte__bouton6{
+        animation: slide-from-bottom 2s ease both;
+        animation-delay: 0.8s;
+    }
+    .carte__bouton7{
+        animation: slide-from-bottom 2s ease both;
+    }
+    .carte__bouton8{
+        animation: slide-from-bottom 2s ease both;
+        animation-delay: 0.4s;
+    }
+    .carte__bouton9{
+        animation: slide-from-bottom 2s ease both;
+        animation-delay: 0.8s;
+    }
+}
+@keyframes slide-from-bottom{
+    0%{
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}      
+@media screen and (min-width: $breakpoint){
+  main{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .menu__title{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+   
+  }
+}

@@ -4,6 +4,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@keyframes checkrotate {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes menudelay {
+  from {
+    transition: all 1s;
+    margin-top: 3rem;
+    opacity: 0;
+  }
+  to {
+    transition: all 1s;
+    margin-top: 0rem;
+    opacity: 1;
+  }
+}
+@keyframes loading {
+  from {
+    opacity: 1;
+    z-index: 10;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+    border-width: 10px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 1px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 10px;
+  }
+}
 body {
   margin: 0%;
   padding: 0%;
@@ -182,30 +226,35 @@ body {
   }
 }
 
-/*
-.loader{
-    background-color: rgba(78, 78, 78, 0.808);
-    z-index: 10000;
-    display: flex;
-    justify-content: space-around;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    }
-    .loader div {
-        position: absolute;
-        top: 10rem;
-        border-radius: 50%;
-        width: 100px;
-        height: 100px;
-        border: 10px solid transparent;
-        border-top-color: $color-primary;
-        animation: loader 1.5s linear infinite;
-    }
-    */
-.header__logomenu {
+.loading__page {
+  animation: loading 5s ease-in-out forwards;
+}
+.loading__page .loader {
+  background-color: rgba(78, 78, 78, 0.808);
+  z-index: 10000;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.loading__page .loader div {
+  position: absolute;
+  top: 10rem;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border: 10px solid transparent;
+  border-top-color: #9356dc;
+  animation: loader 1.5s linear infinite;
+}
+
+.header__menu {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 15%;
 }
 
 .menu__title {
@@ -213,6 +262,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
   border-radius: 1rem 1rem 0rem 0rem;
@@ -252,6 +302,9 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
+}
+.menu__title .back {
+  width: 50%;
 }
 
 .img__restaurant {
@@ -305,6 +358,63 @@ main {
   background-color: #99e2d0;
 }
 
+.principal .section__menu .carte__bouton1 {
+  animation: slide-from-bottom 2s ease both;
+}
+.principal .section__menu .carte__bouton2 {
+  animation: slide-from-bottom 2s ease both;
+  animation-delay: 0.4s;
+}
+.principal .section__menu .carte__bouton3 {
+  animation: slide-from-bottom 2s ease both;
+  animation-delay: 0.8s;
+}
+
+.principal1 .section__menu .carte__bouton4 {
+  animation: slide-from-bottom 2s ease both;
+}
+.principal1 .section__menu .carte__bouton5 {
+  animation: slide-from-bottom 2s ease both;
+  animation-delay: 0.4s;
+}
+.principal1 .section__menu .carte__bouton6 {
+  animation: slide-from-bottom 2s ease both;
+  animation-delay: 0.8s;
+}
+.principal1 .section__menu .carte__bouton7 {
+  animation: slide-from-bottom 2s ease both;
+}
+.principal1 .section__menu .carte__bouton8 {
+  animation: slide-from-bottom 2s ease both;
+  animation-delay: 0.4s;
+}
+.principal1 .section__menu .carte__bouton9 {
+  animation: slide-from-bottom 2s ease both;
+  animation-delay: 0.8s;
+}
+
+@keyframes slide-from-bottom {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 767px) {
+  main {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .menu__title {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .restaurant__cards {
   display: flex;
   flex-wrap: wrap;
@@ -343,7 +453,7 @@ main {
 @media (min-width: 800px) {
   .principal {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     max-width: 100%;
     margin: 0%;
     gap: 0.5rem;
