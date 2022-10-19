@@ -27,11 +27,11 @@
 @keyframes loading {
   from {
     opacity: 1;
-    z-index: 10;
+    position: static;
   }
   to {
     opacity: 0;
-    z-index: -1;
+    position: relative;
   }
 }
 @keyframes loader {
@@ -231,7 +231,6 @@ body {
 }
 .loading__page .loader {
   background-color: rgba(78, 78, 78, 0.808);
-  z-index: 10000;
   display: flex;
   justify-content: space-around;
   position: absolute;
@@ -553,11 +552,17 @@ main {
   .restaurant__cards .card__badge {
     width: 48%;
   }
+  .header__logomenu {
+    margin-right: 90px;
+  }
 }
 @media screen and (min-width: 992px) {
   .restaurant__cards {
     width: 60%;
     margin: 0 auto;
+  }
+  .header__logomenu {
+    margin-right: 180px;
   }
 }
 .btn__explore {

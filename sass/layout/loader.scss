@@ -1,9 +1,9 @@
 .loading__page{
     animation: loading 5s ease-in-out forwards;
-
+    // position: relative;
     .loader{
         background-color: rgba(78, 78, 78, 0.808);
-        z-index: 10000;
+        // z-index: 10000;
         display: flex;
         justify-content: space-around;
         position: absolute;
