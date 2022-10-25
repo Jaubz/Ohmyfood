@@ -8,7 +8,7 @@
 .menu__title{
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     padding-top: 1rem;
@@ -18,18 +18,13 @@
         font-size: 1.5rem;
         margin-right: 1rem;
         cursor: pointer;
-        @media (min-width: $breakpoint){
-            margin-right: 8%;
-        }
+        
     }
     h1{
         font-family: 'Shrikhand';
         margin: 0%;
         padding-left: 1rem;
-        @media (min-width: $breakpoint){
-            margin-left: 8%;
-            padding: 0%;
-        }
+
     }
     .far{
         &:hover{
